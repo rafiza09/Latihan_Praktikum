@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurs</title>
+</head>
+<body >
+    <script>
+        function konversiuang() {
+            let input = (document.form.nilai.value);
+            let konversuang = (document.form.uangasing.value);
+            let hasil = 0;
+            if(konversuang == "USD"){
+                hasil = input*14600;
+            }
+            else{
+                hasil = 0;
+            }
+            document.form.kurs.value=eval(hasil);
+        }
+    </script>
+    <form name="form">
+        <fieldset style="width: 400px; height: 100px; background-color: rgb(247, 247, 247);">
+            <legend>Kurs Rupiah - Mata Uang Asing</legend>
+            <table style="width: 500px; border: 1px solid rgb(17, 17, 17); background-color: rgb(124, 133, 133);">
+                <tr>
+                <th><label for="nilai">Nilai Mata Uang</label></th>
+                <th>Mata Uang Asing</th>
+                <td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="nilai"></td>
+                    <td>
+                        <select name="uangasing">
+                            <option value="USD">Dollar US</option>
+                        </select>
+                    </td>
+                    <td><input type="text" id="kurs"></td>
+                    </tr>
+                    <tr>
+                    <td><input type="button" value="HASIL" onClick="konversiuang()"></td>
+                    <td><button type="reset" >RESET</button></td>
+                    </tr>
+                    </table>
+        </fieldset>
+    </form> 
+</body>
+</html>

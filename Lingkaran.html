@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lingkaran</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        .area{
+            width: fit-content;
+            margin-left: 450px;
+            margin-top: 200px;
+        }
+
+        button{
+            margin-bottom: 10px;
+            margin-top: 10px;
+            width: 100px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function hitung(){
+            const phi = 3.14;
+            let jari = document.getElementById("angka").value;
+            console.log("jari-jari :" + jari);
+            let luas = phi * jari * jari;
+            let hasil = 2.0 * phi *jari;
+            console.log ("luas :" + luas);
+            console.log ("hasil :" + hasil);
+
+            let area_hasil = document.getElementById("hasil");
+            area_hasil.innerHTML = "Luas : " + luas + " & Keliling :" + hasil;
+        }
+    </script>
+    <fieldset class="area">
+        <h2>Menghitung Luas dan Keliling Lingkaran</h2>
+        Masukan jari-jari lingkaran :
+        <input type="number" value="" size="5" id="angka">
+        <br/>
+        <button type="submit" onclick="hitung()">Hitung</button>
+        <br/>
+        hasil : <span id="hasil"></span>
+    </fieldset>
+</body>
